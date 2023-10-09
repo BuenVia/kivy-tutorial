@@ -1,0 +1,53 @@
+#:kivy 2.0.0
+#:import layout_examples layout_examples
+#:import widget_examples widget_examples
+#:import navigation_screen_manager navigation_screen_manager
+#:import box_layout_with_actionbar box_layout_with_actionbar
+
+<MainMenu@BoxLayout>:
+    orientation: "vertical"
+    Button:
+        text: "PageLayoutsExample"
+        on_press: app.manager.push("LayoutExamplesTabs")
+    Button:
+        text: "WidgetsExample"
+        on_press: app.manager.push("WidgetsExample")
+    Button:
+        text: "ImagesExample"
+        on_press: app.manager.push("ImagesExample")
+
+
+<MyScreenManager>:
+    # Screen:
+    #     name: "screen1"
+    #     BoxLayout:
+    #         Button:
+    #             text: "Go to screen ImagesExample"
+    #             on_press: app.manager.push("ImagesExample")
+    #         Button:
+    #             text: "Go to screen 3"
+    #             on_press: app.manager.push("screen3")
+    Screen:
+        name: "menu_screen"
+        MainMenu:
+
+    Screen:
+        name: "screen3"
+        Button:
+            text: "Button 3"
+            on_press: app.manager.pop()
+    Screen:
+        name: "LayoutExamplesTabs"
+        BoxLayoutWithActionBar:
+            text: "Layouts"
+            LayoutExamplesTabs:
+    Screen:
+        name: "WidgetsExample"
+        BoxLayoutWithActionBar:
+            text: "Widgets"
+            WidgetsExample:
+    Screen:
+        name: "ImagesExample"
+        BoxLayoutWithActionBar:
+            title: "Images"
+            ImagesExample:
