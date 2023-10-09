@@ -11,6 +11,7 @@ from kivy.app import App
 # from kivy.properties import StringProperty, BooleanProperty
 from kivy.properties import ObjectProperty
 from navigation_screen_manager import NavigationScreenManager
+from canvas_examples import *
 
 class MyScreenManager(NavigationScreenManager):
     pass
@@ -20,7 +21,8 @@ class TheLabApp(App):
 
     def build(self):
         self.manager = MyScreenManager()
-        return self.manager
+        # return self.manager
+        return CanvasExample5()
 
 if __name__ == "__main__":
     TheLabApp().run()

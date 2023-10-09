@@ -18,24 +18,10 @@
 
 
 <MyScreenManager>:
-    # Screen:
-    #     name: "screen1"
-    #     BoxLayout:
-    #         Button:
-    #             text: "Go to screen ImagesExample"
-    #             on_press: app.manager.push("ImagesExample")
-    #         Button:
-    #             text: "Go to screen 3"
-    #             on_press: app.manager.push("screen3")
     Screen:
         name: "menu_screen"
         MainMenu:
 
-    Screen:
-        name: "screen3"
-        Button:
-            text: "Button 3"
-            on_press: app.manager.pop()
     Screen:
         name: "LayoutExamplesTabs"
         BoxLayoutWithActionBar:
