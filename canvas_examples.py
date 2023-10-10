@@ -50,7 +50,6 @@ class CanvasExample5(Widget):
         self.ball.pos = (self.center_x - self.ball_size / 2, self.center_y - self.ball_size / 2)
     
     def update(self, dt):
-        print("update")
         x, y = self.ball.pos
         x += self.vx
         y += self.vy
